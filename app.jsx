@@ -1,4 +1,4 @@
-let players = [
+let PLAYERS = [
   {
     name: "Jim Hoskins",
     score: 31,
@@ -16,7 +16,7 @@ let players = [
   },
 ];
 
-const Header = ({players}) => {
+const Header = ({ players }) => {
   return (
     <div className="header">
       <table className="stats">
@@ -40,7 +40,7 @@ const Header = ({players}) => {
 }
 
 
-const PlayerList = ({players}) => {
+const PlayerList = ({ players }) => {
   return (
     <div className="player">
       <div className="player-name">Jim Hoskins</div>
@@ -54,14 +54,14 @@ const PlayerList = ({players}) => {
 }
 
 
-const PlayerForm= () =>{
+const PlayerForm = () => {
   return (
     <div className='add-player-form'>
-    <form>
-      <input type="text" placeholder='ENTER A NAME'/>
-      <input type="submit" value='add player' />
-    </form>
-  </div>
+      <form>
+        <input type="text" placeholder='ENTER A NAME' />
+        <input type="submit" value='add player' />
+      </form>
+    </div>
   );
 }
 
@@ -69,10 +69,10 @@ const Application = ({ title, players }) => {
   return (
     <div className="scoreboard">
       <Header players={players} />
-      <PlayerList players={players}/>
-      <PlayerForm /> 
+      <PlayerList players={players} />
+      <PlayerForm />
     </div>
   );
 }
 
-ReactDOM.render(<Application title="Scoreboard" players={players} />, document.getElementById('container'));
+ReactDOM.render(<Application title="Scoreboard" players={PLAYERS} />, document.getElementById('container'));
